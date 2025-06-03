@@ -4,12 +4,10 @@ const puppeteer = require('puppeteer');
 const sessionIds = ['9540215846'];
 const clients = {};
 
-console.log("🔄 Initializing WhatsApp sessions...");
-
 (async () => {
-  const executablePath = puppeteer.executablePath();
+  const executablePath = puppeteer.executablePath(); // ✅ Get full Puppeteer Chrome path
 
-  sessionIds.forEach(id => {
+  sessionIds.forEach((id) => {
     const client = new Client({
       authStrategy: new LocalAuth({ clientId: id }),
       puppeteer: {
@@ -19,9 +17,9 @@ console.log("🔄 Initializing WhatsApp sessions...");
       },
     });
 
-    client.on('ready', () => console.log(`✅ WhatsApp client ${id} ready`));
-    client.on('auth_failure', msg => console.error(`❌ Auth failure for ${id}:`, msg));
-    client.on('disconnected', reason => console.warn(`⚠️ Disconnected ${id}:`, reason));
+    client.on('ready', () => console.log(`✅ WhatsApp client ${id} is ready`));
+    client.on('auth_failure', (msg) => console.error(`❌ Auth failure for ${id}:`, msg));
+    client.on('disconnected', (reason) => console.warn(`⚠️ Client ${id} disconnected:`, reason));
 
     client.initialize();
     clients[id] = client;
