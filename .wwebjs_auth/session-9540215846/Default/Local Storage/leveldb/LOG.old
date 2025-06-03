@@ -1,0 +1,6 @@
+2025/06/02-03:21:58.455 13a8 Reusing MANIFEST C:\Users\gfo\Downloads\backend 2\backend\.wwebjs_auth\session-9540215846\Default\Local Storage\leveldb/MANIFEST-000001
+2025/06/02-03:21:58.466 13a8 Recovering log #31
+2025/06/02-03:21:58.471 13a8 Reusing old log C:\Users\gfo\Downloads\backend 2\backend\.wwebjs_auth\session-9540215846\Default\Local Storage\leveldb/000031.log 
+2025/06/02-03:23:59.453 1904 Level-0 table #36: started
+2025/06/02-03:23:59.457 1904 Level-0 table #36: 14048 bytes OK
+2025/06/02-03:23:59.458 1904 Delete type=0 #31
