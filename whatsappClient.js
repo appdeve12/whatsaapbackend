@@ -7,7 +7,7 @@ const clients = {};
 console.log("🔄 Initializing WhatsApp sessions...");
 
 (async () => {
-  const executablePath = await puppeteer.executablePath();
+  const executablePath = puppeteer.executablePath();
 
   sessionIds.forEach(id => {
     const client = new Client({
